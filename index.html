@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hiking:My beloved hobby</title>
+    <title>Hiking : My beloved hobby ~ Sai Satti</title>
     <style>
       body {
         background: linear-gradient(
@@ -66,8 +66,12 @@
         background-color: #496c5e;
         color: white;
       }
+      footer {
+        padding:20px 5px;
+        line-height: 2;
+      }
 
-      .coder-name {
+      footer a{
         color: rgb(39, 60, 49);
         text-decoration: overline dotted rgb(39, 60, 49) 1.5px;
       }
@@ -111,9 +115,6 @@
       .dark a {
         color: white;
       }
-      .dark .coder-name {
-        text-decoration: overline dotted white 1.5px;
-      }
       .dark .guide-to-hiking {
         color: white;
         background-color: #084359;
@@ -122,6 +123,10 @@
       .dark .guide-to-hiking:hover {
         color: white;
         background-color: #0c584e;
+      }
+      .dark footer a {
+        color:#00b4cd;
+        text-decoration: overline dotted #00b4cd 1.5px;
       }
     </style>
   </head>
@@ -179,12 +184,11 @@
 
     <footer>
       <a
-        class="coder-name"
-        href="https://www.shecodes.io/graduates/71063-sai-satti"
+        href="https://github.com/Sai-S-Mc"
         target="_blank"
         >Sai Satti</a
       >
-      had a lot of fun coding this👆🏽
+      had a lot of fun coding this. The code is open-sourced on <a href="https://github.com/Sai-S-Mc/project-2-hiking" target="_blank">GitHub</a> and is hosted on <a href="https://project-2-hiking-by-sai.netlify.app/" target="_blank">Netlify</a>.
     </footer>
     <script>
       function changeTheme() {
@@ -196,11 +200,12 @@
 
       function emailGuide() {
         let name = prompt("Hi, what is your name?");
-        if (name === "") {
+        if (name === "" ||name === null) {
           name = "Mysterious Human";
         }
         let email = prompt("Drop your email below👇🏽");
-        if (email === "") {
+        if (email === "" || 
+        email === null) {
           alert(
             "Thank you for your interest in Hiking, " +
               name +
