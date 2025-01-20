@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hiking:My beloved hobby</title>
+    <style>
+      body {
+        background: linear-gradient(
+          109.6deg,
+          rgb(170, 255, 169) 11.2%,
+          rgb(17, 255, 189) 91.1%
+        );
+        font-family: cursive;
+      }
+      h1 {
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+        padding: 10px 30px;
+        border-radius: 22px;
+        cursor: pointer;
+      }
+      p {
+        line-height: 1.5;
+        font-size: large;
+      }
+      footer {
+        margin: 20px auto;
+        text-align: center;
+      }
+      .dark-theme {
+        background-color: black;
+        color: white;
+        font-size: small;
+        padding: 10px 15px;
+        transition: all 250ms ease-in-out;
+        box-shadow: 5px 5px 8px rgba(3, 149, 98, 0.436);
+      }
+      .dark-theme:hover {
+        background-color: white;
+        color: black;
+      }
+      .container {
+        margin: 0 auto;
+        max-width: 500px;
+        background: rgba(39, 60, 49, 0.675);
+        padding: 30px;
+        border-radius: 20px;
+      }
+      .read-advice {
+        color: rgb(35, 2, 2);
+      }
+      .guide-to-hiking {
+        background-color: #91d0ba;
+        box-shadow: 3px 3px 8px rgba(159, 255, 170, 0.436);
+        transition: all 250ms ease-in-out;
+      }
+      .guide-to-hiking:hover {
+        background-color: #496c5e;
+        color: white;
+      }
+
+      .coder-name {
+        color: rgb(39, 60, 49);
+        text-decoration: overline dotted rgb(39, 60, 49) 1.5px;
+      }
+
+      .hiking-intro-picture {
+        border-radius: 10px;
+        transition: all 300ms ease-in-out;
+      }
+      .hiking-intro-picture:hover {
+        filter: brightness(114%) contrast(80%);
+
+        transform: scale(1.2);
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 15px;
+        margin: 20px auto;
+      }
+      .grid img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        transition: all 150ms ease-in-out;
+      }
+      .grid img:hover {
+        transform: scale(1.3);
+        filter: contrast(80%);
+      }
+      .dark {
+        background: linear-gradient(
+          114.3deg,
+          rgb(19, 126, 57) 0.2%,
+          rgb(8, 65, 91) 68.5%
+        );
+        color: white;
+      }
+      .dark .container {
+        background-color: rgba(41, 43, 42, 0.45);
+      }
+      .dark a {
+        color: white;
+      }
+      .dark .coder-name {
+        text-decoration: overline dotted white 1.5px;
+      }
+      .dark .guide-to-hiking {
+        color: white;
+        background-color: #084359;
+        transition: all 250ms ease-in-out;
+      }
+      .dark .guide-to-hiking:hover {
+        color: white;
+        background-color: #0c584e;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="dark-theme">Change theme</button>
+    <h1>Hiking</h1>
+    <h2>A relaxing hobby🚶🏽‍♀️</h2>
+    <div class="container">
+      <a
+        href="https://hikersdaily.com/hiking-as-a-hobby/"
+        target="_blank"
+        alt="hiker"
+      >
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/086/696/original/img_5.jpg?1687459250"
+          alt="Hiking"
+          class="hiking-intro-picture"
+      /></a>
+      <div class="grid">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/086/699/original/img_8.jpg?1687459279"
+          alt="forest"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/086/702/original/img_1.jpg?1687462014"
+          alt="hiker"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/086/703/original/img_2.jpg?1687462022"
+          alt="hiker"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/086/704/original/img_3.jpg?1687462030"
+          alt="hiker"
+        />
+      </div>
+      <p>
+        Hiking is a great hobby for people of all ages and abilities. It’s a
+        great way to get outdoors, explore new places, and get some exercise.
+        Plus, it can be relatively inexpensive and doesn’t require a lot of
+        equipment.
+        <br />
+        <a
+          class="read-advice"
+          href="https://www.rei.com/learn/expert-advice/hiking-for-beginners.html"
+          target="_blank"
+        >
+          Read expert advice
+        </a>
+      </p>
+      <button class="guide-to-hiking">
+        The Absolute Beginner’s Guide to Hiking
+      </button>
+    </div>
+
+    <footer>
+      <a
+        class="coder-name"
+        href="https://www.shecodes.io/graduates/71063-sai-satti"
+        target="_blank"
+        >Sai Satti</a
+      >
+      had a lot of fun coding this👆🏽
+    </footer>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+        body.classList.toggle("dark");
+      }
+      let themeButton = document.querySelector(".dark-theme");
+      themeButton.addEventListener("click", changeTheme);
+
+      function emailGuide() {
+        let name = prompt("Hi, what is your name?");
+        if (name === "") {
+          name = "Mysterious Human";
+        }
+        let email = prompt("Drop your email below👇🏽");
+        if (email === "") {
+          alert(
+            "Thank you for your interest in Hiking, " +
+              name +
+              "! We do, however, need your email to send our guide your way.😊"
+          );
+        } else {
+          alert(
+            "Thank you, " +
+              name +
+              "! The guide you requested is on the way to your inbox.📨"
+          );
+        }
+      }
+      let clickButtonForGuide = document.querySelector(".guide-to-hiking");
+      clickButtonForGuide.addEventListener("click", emailGuide);
+    </script>
+  </body>
+</html>
