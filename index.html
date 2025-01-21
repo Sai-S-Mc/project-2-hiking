@@ -67,11 +67,11 @@
         color: white;
       }
       footer {
-        padding:20px 5px;
+        padding: 20px 5px;
         line-height: 2;
       }
 
-      footer a{
+      footer a {
         color: rgb(39, 60, 49);
         text-decoration: overline dotted rgb(39, 60, 49) 1.5px;
       }
@@ -125,7 +125,7 @@
         background-color: #0c584e;
       }
       .dark footer a {
-        color:#63bcdc;
+        color: #63bcdc;
         text-decoration: overline dotted #63bcdc 1.5px;
       }
     </style>
@@ -183,12 +183,15 @@
     </div>
 
     <footer>
-      <a
-        href="https://github.com/Sai-S-Mc"
-        target="_blank"
-        >Sai Satti</a
+      <a href="https://github.com/Sai-S-Mc" target="_blank">Sai Satti</a>
+      had a lot of fun coding this. The code is open-sourced on
+      <a href="https://github.com/Sai-S-Mc/project-2-hiking" target="_blank"
+        >GitHub</a
       >
-      had a lot of fun coding this. The code is open-sourced on <a href="https://github.com/Sai-S-Mc/project-2-hiking" target="_blank">GitHub</a> and is hosted on <a href="https://project-2-hiking-by-sai.netlify.app/" target="_blank">Netlify</a>.
+      and is hosted on
+      <a href="https://project-2-hiking.netlify.app/" target="_blank"
+        >Netlify</a
+      >.
     </footer>
     <script>
       function changeTheme() {
@@ -200,12 +203,11 @@
 
       function emailGuide() {
         let name = prompt("Hi, what is your name?");
-        if (name === "" ||name === null) {
+        if (name === "" || name === null) {
           name = "Mysterious Human";
         }
         let email = prompt("Drop your email below👇🏽");
-        if (email === "" || 
-        email === null) {
+        if (email === "" || email === null) {
           alert(
             "Thank you for your interest in Hiking, " +
               name +
