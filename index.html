@@ -47,14 +47,14 @@
         background-color: white;
         color: black;
       }
-      .container {
+      .secondary-container {
         margin: 0 auto;
         max-width: 500px;
         background: rgba(39, 60, 49, 0.675);
         padding: 30px;
         border-radius: 20px;
       }
-      .read-advice {
+      .article-link {
         color: rgb(35, 2, 2);
       }
       .guide-to-hiking {
@@ -109,7 +109,7 @@
         );
         color: white;
       }
-      .dark .container {
+      .dark .secondary-container {
         background-color: rgba(41, 43, 42, 0.45);
       }
       .dark a {
@@ -131,68 +131,68 @@
     </style>
   </head>
   <body>
-    <button class="dark-theme">Change theme</button>
-    <h1>Hiking</h1>
-    <h2>A relaxing hobby🚶🏽‍♀️</h2>
     <div class="container">
-      <a
-        href="https://hikersdaily.com/hiking-as-a-hobby/"
-        target="_blank"
-        alt="hiker"
-      >
+      <button class="dark-theme">Change theme</button>
+      <h1>Hiking</h1>
+      <h2>A relaxing hobby🚶🏽‍♀️</h2>
+      <div class="secondary-container">
         <img
           src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/086/696/original/img_5.jpg?1687459250"
           alt="Hiking"
           class="hiking-intro-picture"
-      /></a>
-      <div class="grid">
-        <img
-          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/086/699/original/img_8.jpg?1687459279"
-          alt="forest"
         />
-        <img
-          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/086/702/original/img_1.jpg?1687462014"
-          alt="hiker"
-        />
-        <img
-          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/086/703/original/img_2.jpg?1687462022"
-          alt="hiker"
-        />
-        <img
-          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/086/704/original/img_3.jpg?1687462030"
-          alt="hiker"
-        />
+        <div class="grid">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/086/699/original/img_8.jpg?1687459279"
+            alt="forest"
+          />
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/086/702/original/img_1.jpg?1687462014"
+            alt="hiker"
+          />
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/086/703/original/img_2.jpg?1687462022"
+            alt="hiker"
+          />
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/086/704/original/img_3.jpg?1687462030"
+            alt="hiker"
+          />
+        </div>
+        <p>
+          Hiking is a rewarding hobby for people of all ages and fitness levels.
+          It's a great way to enjoy the outdoors, discover new places, and stay
+          active. Best of all, it's low-cost and requires minimal gear to get
+          started. Whether you're taking a short walk through a local trail or
+          tackling a challenging mountain path, hiking offers both physical and
+          mental benefits. It's also a chance to unplug, clear your mind, and
+          connect with nature at your own pace.
+          <br />
+          <a
+            class="article-link"
+            href="https://www.rei.com/learn/expert-advice/hiking-for-beginners.html"
+            target="_blank"
+          >
+            Where do I start?
+          </a>
+        </p>
+        <button class="guide-to-hiking">
+          The Absolute Beginner's Guide to Hiking
+        </button>
       </div>
-      <p>
-        Hiking is a great hobby for people of all ages and abilities. It’s a
-        great way to get outdoors, explore new places, and get some exercise.
-        Plus, it can be relatively inexpensive and doesn’t require a lot of
-        equipment.
-        <br />
-        <a
-          class="read-advice"
-          href="https://www.rei.com/learn/expert-advice/hiking-for-beginners.html"
-          target="_blank"
-        >
-          Read expert advice
-        </a>
-      </p>
-      <button class="guide-to-hiking">
-        The Absolute Beginner’s Guide to Hiking
-      </button>
-    </div>
 
-    <footer>
-      <a href="https://github.com/Sai-S-Mc" target="_blank">Sai Satti</a>
-      had a lot of fun coding this. The code is open-sourced on
-      <a href="https://github.com/Sai-S-Mc/project-2-hiking" target="_blank"
-        >GitHub</a
-      >
-      and is hosted on
-      <a href="https://project-2-hiking.netlify.app/" target="_blank"
-        >Netlify</a
-      >.
-    </footer>
+      <footer>
+        <a href="https://github.com/Sai-S-Mc" target="_blank">Sai Satti</a>
+        had a lot of fun coding this. The code is open-sourced on
+        <a href="https://github.com/Sai-S-Mc/project-2-hiking" target="_blank"
+          >GitHub</a
+        >
+        and hosted on
+        <a href="https://project-2-hiking.netlify.app/" target="_blank"
+          >Netlify</a
+        >.
+      </footer>
+    </div>
     <script>
       function changeTheme() {
         let body = document.querySelector("body");
