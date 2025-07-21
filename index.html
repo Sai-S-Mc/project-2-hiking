@@ -195,19 +195,19 @@
           grid-template-columns: repeat(2, 1fr);
         }
 
-        .container{
-          margin:15px
+        .container {
+          margin: 15px;
         }
-        
-        .secondary-container{
-          padding:15px
+
+        .secondary-container {
+          padding: 15px;
         }
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <button class="theme-button">Change theme</button>
+      <button class="theme-button">Dark theme</button>
       <h1>Hiking</h1>
       <h2>A relaxing hobby🚶🏽‍♀️</h2>
       <div class="secondary-container">
@@ -269,34 +269,39 @@
     </div>
     <script>
       function changeTheme() {
-        let body = document.querySelector("body");
-        body.classList.toggle("dark");
+        let bodyElement = document.querySelector("body");
+        bodyElement.classList.toggle("dark");
+
+        if (bodyElement.classList.contains("dark")) {
+          themeButtonElement.innerHTML = "Light theme";
+        } else {
+          themeButtonElement.innerHTML = "Dark theme";
+        }
       }
-      let themeButton = document.querySelector(".theme-button");
-      themeButton.addEventListener("click", changeTheme);
 
       function emailGuide() {
-        let name = prompt("Hi, what is your name?");
-        if (name === "" || name === null) {
+        let name = prompt("Hi, what is your name?").trim().toLowerCase();
+        name = name.charAt(0).toUpperCase() + name.slice(1);
+        if (!name) {
           name = "Mysterious Human";
         }
-        let email = prompt("Drop your email below👇🏽");
-        if (email === "" || email === null) {
+        let email = prompt("Drop your email below👇🏽").trim();
+        if (!email) {
           alert(
-            "Thank you for your interest in Hiking, " +
-              name +
-              "! We do, however, need your email to send our guide your way.😊"
+            `Thank you for your interest in Hiking, ${name}! We do, however, need your email to send our guide your way.😊`
           );
         } else {
           alert(
-            "Thank you, " +
-              name +
-              "! The guide you requested is on the way to your inbox.📨"
+            `Thank you, ${name}! The guide you requested is on the way to your inbox.📨`
           );
         }
       }
-      let clickButtonForGuide = document.querySelector(".hiking-guide-button");
-      clickButtonForGuide.addEventListener("click", emailGuide);
+
+      let themeButtonElement = document.querySelector(".theme-button");
+      themeButtonElement.addEventListener("click", changeTheme);
+
+      let guideButtonElement = document.querySelector(".hiking-guide-button");
+      guideButtonElement.addEventListener("click", emailGuide);
     </script>
   </body>
 </html>
