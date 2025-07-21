@@ -51,6 +51,7 @@
         cursor: pointer;
         padding: 10px 15px;
         transition: all ease-in-out 300ms;
+        font-family: inherit;
       }
 
       .theme-button {
@@ -113,13 +114,13 @@
 
       .grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         gap: 15px;
         margin: 20px 0;
       }
 
       .grid img:hover {
-        transform: scale(1.3);
+        transform: scale(2);
         filter: contrast(80%);
       }
 
@@ -175,6 +176,32 @@
       .dark footer a:hover {
         color: #05b9d9;
         text-decoration-color: #05b9d9;
+      }
+
+      @media (max-width: 500px) {
+        h1 {
+          font-size: 28px;
+        }
+
+        h2 {
+          font-size: 22px;
+        }
+
+        p {
+          font-size: 16px;
+        }
+
+        .grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .container{
+          margin:15px
+        }
+        
+        .secondary-container{
+          padding:15px
+        }
       }
     </style>
   </head>
