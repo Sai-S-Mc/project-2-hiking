@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hiking : My beloved hobby ~ Sai Satti</title>
+    <script src="https://kit.fontawesome.com/f827618e53.js" crossorigin="anonymous"></script>
     <style>
       body {
         background: linear-gradient(
@@ -207,7 +208,7 @@
   </head>
   <body>
     <div class="container">
-      <button class="theme-button">Dark theme</button>
+      <button class="theme-button"><i class="fa-solid fa-moon"></i> Dark theme</button>
       <h1>Hiking</h1>
       <h2>A relaxing hobby🚶🏽‍♀️</h2>
       <div class="secondary-container">
@@ -273,9 +274,9 @@
         bodyElement.classList.toggle("dark");
 
         if (bodyElement.classList.contains("dark")) {
-          themeButtonElement.innerHTML = "Light theme";
+          themeButtonElement.innerHTML = `<i class="fa-solid fa-sun"></i> Light theme`;
         } else {
-          themeButtonElement.innerHTML = "Dark theme";
+          themeButtonElement.innerHTML = `<i class="fa-solid fa-moon"></i> Dark theme`;
         }
       }
 
