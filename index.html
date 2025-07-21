@@ -13,9 +13,20 @@
         );
         font-family: cursive;
       }
-      h1 {
-        text-align: center;
+
+      .container {
+        margin: 30px;
       }
+
+      .secondary-container {
+        margin: 0 auto;
+        max-width: 500px;
+        background: rgba(39, 60, 49, 0.675);
+        padding: 30px;
+        border-radius: 20px;
+      }
+
+      h1,
       h2 {
         text-align: center;
       }
@@ -27,15 +38,18 @@
         border-radius: 22px;
         cursor: pointer;
       }
+
       p {
         line-height: 1.5;
         font-size: large;
       }
+
       footer {
         margin: 20px auto;
         text-align: center;
       }
-      .dark-theme {
+
+      .theme-button {
         background-color: black;
         color: white;
         font-size: small;
@@ -43,29 +57,27 @@
         transition: all 250ms ease-in-out;
         box-shadow: 5px 5px 8px rgba(3, 149, 98, 0.436);
       }
-      .dark-theme:hover {
+
+      .theme-button:hover {
         background-color: white;
         color: black;
       }
-      .secondary-container {
-        margin: 0 auto;
-        max-width: 500px;
-        background: rgba(39, 60, 49, 0.675);
-        padding: 30px;
-        border-radius: 20px;
-      }
+
       .article-link {
         color: rgb(35, 2, 2);
       }
-      .guide-to-hiking {
+
+      .hiking-guide-button {
         background-color: #91d0ba;
         box-shadow: 3px 3px 8px rgba(159, 255, 170, 0.436);
         transition: all 250ms ease-in-out;
       }
-      .guide-to-hiking:hover {
+
+      .hiking-guide-button:hover {
         background-color: #496c5e;
         color: white;
       }
+
       footer {
         padding: 20px 5px;
         line-height: 2;
@@ -76,31 +88,36 @@
         text-decoration: overline dotted rgb(39, 60, 49) 1.5px;
       }
 
-      .hiking-intro-picture {
+      .first-image {
         border-radius: 10px;
         transition: all 300ms ease-in-out;
       }
-      .hiking-intro-picture:hover {
+
+      .first-image:hover {
         filter: brightness(114%) contrast(80%);
 
         transform: scale(1.2);
       }
+
       .grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 15px;
         margin: 20px auto;
       }
+
       .grid img {
         width: 100%;
         height: 100%;
         border-radius: 10px;
         transition: all 150ms ease-in-out;
       }
+
       .grid img:hover {
         transform: scale(1.3);
         filter: contrast(80%);
       }
+
       .dark {
         background: linear-gradient(
           114.3deg,
@@ -109,21 +126,26 @@
         );
         color: white;
       }
+
       .dark .secondary-container {
         background-color: rgba(41, 43, 42, 0.45);
       }
+
       .dark a {
         color: white;
       }
-      .dark .guide-to-hiking {
+
+      .dark .hiking-guide-button {
         color: white;
         background-color: #084359;
         transition: all 250ms ease-in-out;
       }
-      .dark .guide-to-hiking:hover {
+
+      .dark .hiking-guide-button:hover {
         color: white;
         background-color: #0c584e;
       }
+
       .dark footer a {
         color: #63bcdc;
         text-decoration: overline dotted #63bcdc 1.5px;
@@ -132,14 +154,14 @@
   </head>
   <body>
     <div class="container">
-      <button class="dark-theme">Change theme</button>
+      <button class="theme-button">Change theme</button>
       <h1>Hiking</h1>
       <h2>A relaxing hobby🚶🏽‍♀️</h2>
       <div class="secondary-container">
         <img
           src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/086/696/original/img_5.jpg?1687459250"
           alt="Hiking"
-          class="hiking-intro-picture"
+          class="first-image"
         />
         <div class="grid">
           <img
@@ -176,7 +198,7 @@
             Where do I start?
           </a>
         </p>
-        <button class="guide-to-hiking">
+        <button class="hiking-guide-button">
           The Absolute Beginner's Guide to Hiking
         </button>
       </div>
@@ -198,7 +220,7 @@
         let body = document.querySelector("body");
         body.classList.toggle("dark");
       }
-      let themeButton = document.querySelector(".dark-theme");
+      let themeButton = document.querySelector(".theme-button");
       themeButton.addEventListener("click", changeTheme);
 
       function emailGuide() {
@@ -221,7 +243,7 @@
           );
         }
       }
-      let clickButtonForGuide = document.querySelector(".guide-to-hiking");
+      let clickButtonForGuide = document.querySelector(".hiking-guide-button");
       clickButtonForGuide.addEventListener("click", emailGuide);
     </script>
   </body>
