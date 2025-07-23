@@ -211,8 +211,8 @@
           padding: 15px;
         }
 
-        .grid img:hover{
-           transform: scale(1.5);
+        .grid img:hover {
+          transform: scale(1.5);
         }
       }
     </style>
@@ -223,7 +223,7 @@
         <i class="fa-solid fa-moon"></i> Dark theme
       </button>
       <h1>Hiking</h1>
-      <h2>A relaxing hobby🚶🏽‍♀️</h2>
+      <h2>A relaxing hobby🚶</h2>
       <div class="secondary-container">
         <img
           src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/086/696/original/img_5.jpg?1687459250"
@@ -310,12 +310,19 @@
       }
 
       function emailGuide() {
-        let name = prompt("Hi, what is your name?").trim().toLowerCase();
-        name = name.charAt(0).toUpperCase() + name.slice(1);
+        let name = prompt("Hi, what is your name?");
+        if (name !== null) {
+          name = name.trim().toLowerCase();
+        }
         if (!name) {
           name = "Mysterious Human";
+        } else {
+          name = name.charAt(0).toUpperCase() + name.slice(1);
         }
-        let email = prompt("Drop your email below👇🏽").trim();
+        let email = prompt("Drop your email below👇🏽");
+        if (email !== null) {
+          email = email.trim();
+        }
         if (!email) {
           alert(
             `Thank you for your interest in Hiking, ${name}! We do, however, need your email to send our guide your way.😊`
